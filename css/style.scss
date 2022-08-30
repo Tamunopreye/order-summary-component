@@ -1,0 +1,96 @@
+:root {
+--Paleblue: hsl(225, 100%, 94%);
+--Brightblue: hsl(245, 75%, 52%);
+--Verypaleblue: hsl(225, 100%, 98%);
+--Desaturatedblue: hsl(224, 23%, 55%)
+--Darkblue: hsl(223, 47%, 23%)
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Paleblue);
+
+    .card {
+        max-width: 350px;
+        text-align: center; 
+        background-color: #fff;
+        border-radius: 1rem;
+        overflow: auto;
+        
+        .hero {
+            width: 100%;
+        }
+        .card-content {
+            padding: 40px;
+            
+            h1 {
+                margin-top: -1rem;
+            }
+            .price-tag {
+                background-color: rgba($color: var(--Paleblue), $alpha: 0.1);
+                outline: var(--Verypaleblue);
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 1rem auto;
+
+                .bold {
+                    font-weight: 900;
+                }
+                span {
+                    display: block;
+                }
+                a {
+                    color: var(--Brightblue);
+                }
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+            button {
+                cursor: pointer;
+                margin: auto;
+                display: block;
+                margin: 0.788rem auto;
+                text-align: center;
+                border: none;
+            }
+            .proceed {
+                background-color: var(--Brightblue);
+                color: #fff;
+                padding: 0.8rem 2.98rem;
+                width: 100%;
+                border-radius: 10px;
+                box-shadow: 5px 5px 20px var(--Brightblue);
+            
+            }
+
+            .proceed:hover {
+                background-color: var(--Brightblue);
+                opacity: 0.7;
+            }
+            .cancel {
+                background-color: transparent;
+                padding: 0.6rem 2.98rem;
+                margin-bottom: -1rem;
+                opacity: 0.7;
+            }
+            .cancel:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
